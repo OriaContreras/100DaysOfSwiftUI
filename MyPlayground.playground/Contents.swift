@@ -156,3 +156,87 @@ for _ in 1...5 {
 }
 
 print(lyric)
+
+
+var countdown = 10
+
+while countdown > 0 {
+    print("\(countdown)…")
+    countdown -= 1
+}
+
+print("Blast off!")
+
+let id = Int.random(in: 1...1000)
+
+let amount = Double.random(in: 0...1)
+
+
+// create an integer to store our roll
+var roll = 0
+
+// carry on looping until we reach 20
+while roll != 20 {
+    // roll a new dice and print what it was
+    roll = Int.random(in: 1...20)
+    print("I rolled a \(roll)")
+}
+
+// if we're here it means the loop ended – we got a 20!
+print("Critical hit!")
+
+
+let filenames = ["me.jpg", "work.txt", "sophie.jpg", "logo.psd"]
+
+for filename in filenames {
+    if filename.hasSuffix(".jpg") == false {
+        continue
+    }
+
+    print("Found picture: \(filename)")
+}
+
+
+let number1 = 4
+let number2 = 14
+var multiples = [Int]()
+
+for i in 1...100_000 {
+    if i.isMultiple(of: number1) && i.isMultiple(of: number2) {
+        multiples.append(i)
+
+        if multiples.count == 10 {
+            break
+        }
+    }
+}
+
+print(multiples)
+
+//Checkpoint 3
+
+let three = 3
+let five = 5
+for i in 1...100 {
+    if i.isMultiple(of: three) && i.isMultiple(of: five) {
+        print("FizzBuzz")
+    } else if i.isMultiple(of: three) {
+        print("Fizz")
+
+    }else if i.isMultiple(of: five) {
+        print("Buzz")
+
+    } else {
+        print(i)
+    }
+
+
+}
+
+func printTimesTables(number: Int, end: Int) {
+    for i in 1...end {
+        print("\(i) x \(number) is \(i * number)")
+    }
+}
+
+printTimesTables(number: 5, end: 20)
