@@ -240,3 +240,27 @@ func printTimesTables(number: Int, end: Int) {
 }
 
 printTimesTables(number: 5, end: 20)
+
+//function
+
+func MyFunc(word1: String, word2: String) -> Bool {
+
+    let firstWord = word1.sorted()
+    let secondWord = word2.sorted()
+
+    return firstWord == secondWord
+}
+
+func MyFuncR(word1: String, word2: String) -> Bool {
+    return word1.sorted() == word2.sorted()
+}
+
+func MyFuncRdos(word1: String, word2: String) -> Bool {
+    word1.sorted() == word2.sorted()
+}
+
+MyFunc(word1: "Halo", word2: "Hola")
+MyFuncR(word1: "Chao", word2: "Choa")
+MyFuncRdos(word1: "kiYu", word2: "Yuki")
+
+
